@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test DOM</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body><div id= mainDiv>
+    <div id='Div'>
+        <H1>Quantity</H1>
+        <input id ="quantity" oninput="number();" placeholder="Type here"   type="text">
+     </div>
+        
+       <div id= 'div1'>
+        <ol id="o1"></ol>
+    </div>
+</div>
+    
+
+    <script>
+        
+        number= ()=>{
+           
+         var x= document.getElementById('quantity').value
+         console.log(x)
+         
+          var rem=document.getElementById('o1').remove();
+         
+        
+                                
+        
+         for(let i = 0; i< x;i++){
+              var cre= document.createElement("ol")
+              cre.setAttribute('id', "o1")
+              document.getElementById('div1').appendChild(cre)
+              
+               var para= document.createElement("li");
+          para.setAttribute('id', 'paragraph');
+          document.getElementById("o1").appendChild(para);
+                                
+        }
+                            
+                   }
+       
+        
+     </script>
+</body>
+</html>
